@@ -1,7 +1,7 @@
 using RabbitMQ.Client;
 using System.Text;
 
-namespace rabbit_food_api.Service;
+namespace RabbitFood.Shared.Services;
 
 public class RabbitService : IRabbitService
 {

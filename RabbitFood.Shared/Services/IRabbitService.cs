@@ -1,4 +1,4 @@
-namespace rabbit_food_api.Service;
+namespace RabbitFood.Shared.Services;
 
 public interface IRabbitService
 {

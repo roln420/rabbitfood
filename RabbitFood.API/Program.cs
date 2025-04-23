@@ -1,4 +1,4 @@
-using rabbit_food_api.Service;
+using RabbitFood.Shared.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
