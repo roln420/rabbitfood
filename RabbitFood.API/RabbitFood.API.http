@@ -1,0 +1,6 @@
+@rabbit_food_api_HostAddress = http://localhost:5077
+
+GET {{rabbit_food_api_HostAddress}}/weatherforecast/
+Accept: application/json
+
+###

@@ -1,0 +1,19 @@
+# Please refer https://aka.ms/HTTPSinContainer on how to setup an https developer certificate for your ASP.NET Core service.
+
+services:
+  rabbitfoodapi:
+    image: rabbitfoodapi
+    build:
+      context: .
+      dockerfile: RabbitFood.API/Dockerfile
+    ports:
+      - 5077:5077
+  rabbitmq:
+    image: rabbitmq:management
+    container_name: rabbitmq
+    ports:
+      - 5672:5672
+      - 15672:15672
+    environment:
+      - RABBITMQ_DEFAULT_USER=carrot
+      - RABBITMQ_DEFAULT_PASS=P@ssword!
