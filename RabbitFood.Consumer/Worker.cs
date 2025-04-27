@@ -26,7 +26,7 @@ public class Worker : BackgroundService
                 {
                     var body = ea.Body.ToArray();
                     var message = Encoding.UTF8.GetString(body);
-                    Console.WriteLine($" [x] Received {message}");
+                    _logger.LogInformation("Receieved '{message}' at: {time}", message, DateTimeOffset.Now);
                     return Task.CompletedTask;
                 });
             }
