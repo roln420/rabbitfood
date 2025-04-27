@@ -27,6 +27,9 @@ ENV DOTNET_USE_POLLING_FILE_WATCHER=true \
 EXPOSE 5000
 
 # Optional: Copy project files (in case you want to pre-restore in the image build)
+COPY ["RabbitFood.Shared/RabbitFood.Shared.csproj", "RabbitFood.Shared/"]
+RUN dotnet restore "RabbitFood.Shared/RabbitFood.Shared.csproj"
+
 COPY ["RabbitFood.Consumer/RabbitFood.Consumer.csproj", "RabbitFood.Consumer/"]
 RUN dotnet restore "RabbitFood.Consumer/RabbitFood.Consumer.csproj"
 
