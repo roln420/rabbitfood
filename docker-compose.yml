@@ -8,6 +8,11 @@ services:
       dockerfile: RabbitFood.API/Dockerfile
     ports:
       - 5077:5077
+  rabbitfoodconsumer:
+    image: rabbitfoodconsumer
+    build:
+      context: .
+      dockerfile: RabbitFood.Consumer/Dockerfile
   rabbitmq:
     image: rabbitmq:management
     container_name: rabbitmq
