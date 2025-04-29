@@ -8,6 +8,7 @@ services:
         - configuration=Debug
     ports:
       - 5077:5077
+      - 5001:5001
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
     volumes:
@@ -17,5 +18,9 @@ services:
     build:
       args:
         - configuration=Debug
+    ports:
+      - 5002:5002
     environment:
       - ASPNETCORE_ENVIRONMENT=Development
+    volumes:
+      - ~/.vsdbg:/remote_debugger:rw
